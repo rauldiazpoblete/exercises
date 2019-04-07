@@ -1,0 +1,58 @@
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #454545;
+  background: #f2f2f2;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 7.5px;
+}
+
+.col {
+  flex: 1 1 100%;
+}
+
+.card {
+  height: 250px;
+  margin: 7.5px;
+  background: white;
+  font-size: 3rem;
+  line-height: 250px;
+  font-weight: 600;
+  text-align: center;
+  outline: 1px solid rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+}
+
+@media (min-width: 768px) {
+  .col {
+    flex-basis: 50%;
+  }
+  .col--big {
+    flex-basis: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .col {
+    flex-basis: 25%;
+  }
+  .col--big {
+    flex-basis: 50%;
+  }
+}
