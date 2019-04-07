@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Exercise 4</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-size: 16px;
+        font-family: Arial, Helvetica, sans-serif;
+        overflow: hidden;
+      }
+      .background {
+        fill: white;
+      }
+      .path {
+        fill: steelblue;
+        stroke: white;
+        stroke-linejoin: round;
+        stroke-linecap: round;
+        opacity: 0.75;
+        transition: opacity 0.3s ease;
+        cursor: pointer;
+      }
+      .path:hover {
+        opacity: 0.9;
+      }
+      .path.active {
+        opacity: 1;
+      }
+      #tooltip {
+        position: absolute;
+        padding: 0.375rem 0.5rem;
+        background: white;
+        background: rgba(255, 255, 255, 0.85);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+        pointer-events: none;
+      }
+    </style>
+  </head>
+  <body>
+    <svg id="map">
+      <rect class="background"></rect>
+      <g class="container"></g>
+    </svg>
+    <div id="tooltip"></div>
+  </body>
+</html>
